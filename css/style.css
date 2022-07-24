@@ -1,0 +1,142 @@
+:root {
+  /* PRIMARY */
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+
+  /* NEUTRAL */
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+
+  --weight-main: 700;
+  --weight-sub: 500;
+
+  --body-font: 14px;
+
+  --fraunces: 'Fraunces', serif;
+  --montserrat: 'Montserrat', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--body-font);
+  font-family: var(--montserrat);
+  color: var(--dark-grayish-blue);
+  background-color: var(--cream);
+}
+
+.main-content {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 700px;
+  border-radius: 15px;
+  background-color: var(--white);
+  overflow: hidden;
+}
+
+.img-box {
+  width: 100%;
+}
+
+.product-img {
+  width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+.text-box {
+  padding: 20px;
+}
+
+.tag-name {
+  letter-spacing: 6px;
+  font-weight: var(--weight-main);
+  color: var(--dark-grayish-blue);
+  display: block;
+  margin-bottom: 15px;
+}
+
+.product-title {
+  font-family: var(--fraunces);
+  color: var(--very-dark-blue);
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.product-text {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.prices-box {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.price-green {
+  font-size: 25px;
+  font-family: var(--fraunces);
+  color: var(--dark-cyan);
+}
+
+.price-slash {
+  text-decoration: line-through;
+}
+
+.price:not(:last-child) {
+  /* display: block; */
+  margin-right: 20px;
+}
+
+.product-btn:link,
+.product-btn:visited {
+  background-color: var(--dark-cyan);
+  text-decoration: none;
+  color: var(--white);
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .product-content {
+    width: 90vw;
+    flex-direction: column;
+  }
+
+  .img-box {
+    height: 400px;
+  }
+
+  .product-img {
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
+
+  .product-btn:link,
+  .product-btn:visited {
+    padding: 20px;
+  }
+}
